@@ -1,0 +1,52 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+/*HEADER*/
+/*header{
+    background-image: linear-gradient(to left, rgb(0, 0, 104), rgb(68, 2, 112));
+    height:150px;
+    text-align:center;
+    color:white;
+    font:500 2em arial;
+}
+header>h1{
+    padding-top:10px;
+}*/
+body{
+    background: grey url('../imagens/pexels-philippe-donn-1257860.jpg') center center fixed;
+    background-size: cover 600px;
+    margin:auto;
+}
+/*MAIN*/
+main{
+    background-color: white;
+    max-width:800px;
+    margin:auto;
+}
+section{
+    text-align:center;
+}section>p{
+    font:1.2em arial;
+    margin:15px;
+    text-indent:10px;
+    text-align:justify;
+}
+section.coluna{
+    display:inline-block;
+
+}
+#img1{
+    max-height:500px;
+    max-width:400px;
+    width:50vw;
+    background:rgba(0, 0, 0, 0) url('../imagens/espaço.avif') center center no-repeat fixed;
+    background-size:cover;
+    border-radius:0px 10px 0px 10px;
+}
+#img2{
+    margin-top:40px;
+    max-width:400px;
+    width: 50vw; 
+    background-repeat: no-repeat
+}
