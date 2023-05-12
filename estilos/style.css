@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+
 *{
     padding:0px;
     margin:0px;
 }
+
 /*HEADER*/
 header{
     background: url('../imagens/espaço.avif') center center no-repeat fixed;
@@ -13,34 +17,40 @@ header{
     
 }
 header>h1{
-    padding-top:10px;
-}
-body{
-    background: grey url('../imagens/pexels-philippe-donn-1257860.jpg') center center fixed;
-    background-size: cover 600px;
-    margin:auto;
+    padding-top:10px
 }
 /*MAIN*/
 main{
     background-color: white;
     max-width:1000px;
-    /*margin:auto;*/
+    min-width:250px;
+    margin:auto;
     box-shadow: inset 1px 2px 6px 2px rgba(0, 0, 0, 0.349);
-    padding-top:60px;
+    padding:60px 20px 0px 20px;
+}
+main h2{
+    background-image:linear-gradient(to left, rgba(0, 0, 255, 0.233), rgba(128, 0, 128, 0.322));
+    
+    max-width:500px;
+    width:82vw;
+    border-radius:10px;
+    font:800 1.6em 'bungee', arial, sans-serif;
+    margin:auto;
 }
 section{
     text-align:center;
-}section>p{
+}
+section>p{
     font:1.2em arial;
-    margin:15px;
+    margin:30px 0px 30px 0px;
     text-indent:10px;
     text-align:justify;
 }
 #txt{
     position:absolute;
-    left:27vw;
+    left:35vw;
     max-width:600px;
-    width:80vw;
+    width:60vw;
     margin:10vh 5px 0px 0px;
 }
 #img1{
@@ -49,11 +59,22 @@ section{
     background:rgba(0, 0, 0, 0) url('../imagens/espaço.avif') center center no-repeat fixed;
     background-size:cover;
     border-radius:0px 10px 0px 10px;
+
+    margin:30px 0px 30px 0px;
 }
 #img2{
     display:inline-block;
     margin-top:40px;
     max-width:400px;
     width: 50vw; 
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+
+    animation-name:flutuar;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+}
+@keyframes flutuar{
+    0%{transform:rotateY(0px)}
+    50%{transform:translateY(10px)}
+    100%{transform:translateY(0px)}
 }
