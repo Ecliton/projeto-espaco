@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
-
+:root{
+    --cor1:#0396A6;
+    --cor2:#7E84F2;
+    --cor3:#0511F2;
+    --cor4:#9303A6;
+    --cor5:#EE05F2;
+}
 *{
     padding:0px;
     margin:0px;
 }
 
-/*HEADER*/
+/*//////////////////////////////// HEADER ///////////////////////////////*/
+
 header{
     background: url('../imagens/espaço.avif') center center no-repeat fixed;
     background-size:cover;
@@ -19,33 +26,59 @@ header{
 header>h1{
     padding-top:10px
 }
-/*MAIN*/
+
+/*//////////////////////////////// MAIN /////////////////////////////////*/
+
 main{
     background-color: white;
     max-width:1000px;
     min-width:250px;
     margin:auto;
-    box-shadow: inset 1px 2px 6px 2px rgba(0, 0, 0, 0.349);
+   /* box-shadow: inset 1px 2px 6px 2px rgba(0, 0, 0, 0.349);*/
     padding:60px 20px 0px 20px;
 }
 main h2{
-    background-image:linear-gradient(to left, rgba(0, 0, 255, 0.233), rgba(128, 0, 128, 0.322));
+    background-image:linear-gradient(to left, var(--cor1), var(--cor2));
     
     max-width:500px;
     width:82vw;
     border-radius:10px;
-    font:800 1.6em 'bungee', arial, sans-serif;
+    font:800 1.3em 'bungee', arial, sans-serif;
     margin:auto;
 }
+main h3{
+    font: bold 1.4em arial;
+}
+
+/*//////////////////////////// SECTIONS /////////////////////////////////*/
+
 section{
     text-align:center;
 }
 section>p{
-    font:1.2em arial;
+    font:bold 1em arial;
     margin:30px 0px 30px 0px;
     text-indent:10px;
     text-align:justify;
+    line-height: 20px;;
 }
+section a{
+    text-decoration:none;
+    color:var(--cor1);
+}
+section a:hover{
+    color:var(--cor3);
+
+    animation-name:cor;
+    animation-duration:1s;
+}
+@keyframes cor{
+    0%{color:var(--cor1)}
+    100%{color:var(--cor3)}
+}
+
+/*///////////////////////////////// IMAGENS /////////////////////////////*/
+
 #txt{
     position:absolute;
     left:35vw;
@@ -69,12 +102,38 @@ section>p{
     width: 50vw; 
     background-repeat: no-repeat;
 
-    animation-name:flutuar;
+    /*animation-name:flutuar;
     animation-duration:3s;
-    animation-iteration-count:infinite;
+    animation-iteration-count:infinite;*/
 }
 @keyframes flutuar{
     0%{transform:rotateY(0px)}
     50%{transform:translateY(10px)}
     100%{transform:translateY(0px)}
+}
+
+/*////////////////////////////// RODAPÉ /////////////////////////////////*/
+footer{
+    bacKground-image:linear-gradient(to left, var(--cor1), var(--cor2));
+    
+    max-width:700px;
+    font:1.5em 'bungee', helvetica, sans-serif;
+    text-align:center;
+    border-radius:10px;
+    margin:auto;
+}
+footer a{
+    color:var(--cor5);
+    text-decoration:none;
+}footer a:hover{
+    color:var(--cor3); 
+
+    animation-name:mudacor;
+    animation-duration:3s;
+    animation-iteration-count: 1/*infinite*/;
+}
+@keyframes mudacor{
+    0%{color:var(--cor5)}
+    100%{color:var(--cor3)}
+    /*100%{color:var(--cor5)}*/
 }
