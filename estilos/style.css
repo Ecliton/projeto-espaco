@@ -17,13 +17,14 @@
 header{
     background: url('../imagens/espaço.avif') center center no-repeat fixed;
     background-size:cover;
-    height:150px;
+    height:200px;
     text-align:center;
     color:white;
     font:500 2em arial;
     
 }
 header>h1{
+    font:2em "bungee", arial, sans-serif;
     padding-top:10px
 }
 
@@ -102,9 +103,9 @@ section a:hover{
     width: 50vw; 
     background-repeat: no-repeat;
 
-    animation-name:flutuar;
+    /*animation-name:flutuar;
     animation-duration:3s;
-    animation-iteration-count:infinite;
+    animation-iteration-count:infinite;*/
 }
 @keyframes flutuar{
     0%{transform:rotateY(0px)}
@@ -141,12 +142,14 @@ footer a{
 /*/////////////////////////////// PAG. TERRA ////////////////////////////*/
 .terra{
     background:var(--cor1);
-}
-header#t1{
 
-    color:var(--cor1);
 }
-
+header#t1 img{
+    width:40px;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
 /*////////////////////////////// BODY ///////////////////////////////////*/
 
 body{
@@ -154,27 +157,51 @@ body{
 }
 /*////////////////////////////// MAIN ///////////////////////////////////*/
 
-main{
+main.terra{
     text-align:center;
+    margin:auto;
     
 }
 
 /*//////////////////////////// SECTION //////////////////////////////////*/
 
-#t2,#t3,#t4,#t5{
+#t2,#t4{
+    position:absolute;
+    left:10px;
 
-    display:inline-block;
     background:white;
     border-radius:10px;
-    padding:10px;
     box-shadow: 2px 3px 6px 1px #0000004d;
-    margin:35px 70px 27px 70px;
+    width:20vw;
+    height:13vw;
+    margin-left:10px;
+    padding:10px;
 
-    width:200px;
+    font:bold 2vw arial;
 
     animation-name:aparecer;
     animation-duration:2s;
 }
+#t3{
+    position:absolute;
+    right:10px;
+
+    background:white;
+    border-radius:10px;
+    box-shadow: 2px 3px 6px 1px #0000004d;
+    width:20vw;
+    height:13vw;
+    margin-left:10px;
+    padding:10px;
+
+    font:bold 2vw arial;
+
+    animation-name:aparecer;
+    animation-duration:2s;
+}
+
+
+
 @keyframes aparecer{
     0%{background-color:rgba(255, 255, 255, 0); color:rgba(255, 255, 255, 0)}
 
@@ -186,9 +213,10 @@ img.t2{
     max-width:500px;
     width:60vw;
     padding:40px;
+    margin-top:162px;
 
-    animation-name:flutuar;
+    /*animation-name:flutuar;
     animation-duration:3s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
 }
 
