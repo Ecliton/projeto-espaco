@@ -14,18 +14,51 @@
 
 /*//////////////////////////////// HEADER ///////////////////////////////*/
 
+#hora{
+    margin-left:10px;
+    display: inline-block;
+    font: 1em "bungee", arial, helvetica, sans-serif;
+
+}
+#pt{
+    display:inline-block;
+    margin-right:10px;
+    vertical-align:4px;
+}
+#minuto{
+    margin-left:-9px;
+    display: inline-block;
+    font: 1em "bungee", arial, helvetica, sans-serif;
+}
+
 header{
     background: url('../imagens/espaço.avif') center center no-repeat fixed;
     background-size:cover;
     height:200px;
-    text-align:center;
     color:white;
     font:500 2em arial;
     
 }
 header>h1{
+
+    position:absolute;
+    left:50%;
+    top:20px;
+
+    transform:translate(-50%);
     font:2em "bungee", arial, sans-serif;
-    padding-top:10px
+
+    animation:aparecer1 2s;
+}
+@keyframes aparecer1{
+    0%{color:rgba(255, 255, 255, 0)}
+
+    100%{color:rgb(255, 255, 255)}
+}
+
+#hora:hover, #minuto:hover{ 
+    color:red;
+    transition-duration: 1s;
 }
 
 /*//////////////////////////////// MAIN /////////////////////////////////*/
@@ -215,8 +248,8 @@ img.t2{
     padding:40px;
     margin-top:162px;
 
-    /*animation-name:flutuar;
+    animation-name:flutuar;
     animation-duration:3s;
-    animation-iteration-count: infinite;*/
+    animation-iteration-count: infinite;
 }
 
